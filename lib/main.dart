@@ -1,124 +1,122 @@
 import 'package:flutter/material.dart';
-
 void main(){
-
   runApp(const MyApp());
-
 }
-
 class MyApp extends StatelessWidget{
   const MyApp({super.key});
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Container(
-          color: Colors.black,
-          child: Row(
-            mainAxisAlignment:  MainAxisAlignment.center,
+        color: Colors.white,
+        child: Stack(
             children: [
-              Container(
-                decoration: BoxDecoration(
-                  color: Colors.blueAccent,
-                  borderRadius: BorderRadius.only(topLeft: Radius.circular(20),bottomLeft: Radius.circular(20)),
-                ),
-                child: Center(
-                  child: Text('F',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      decoration: TextDecoration.none,
-                      color: Colors.black,
-                    ),),
-                ),
-                height: 200,
-                width: 50,
+              Positioned(
+                  top: 45,
+                  left: 25,
+                  child: Container(
+                    decoration: BoxDecoration(
+                        color: Colors.red,
+                        borderRadius: BorderRadius.circular(10)
+                    ),
+                    child: Text("Box 6",
+                      style: TextStyle(
+                        decoration: TextDecoration.none,
+                        color: Colors.white,
+                        fontSize: 30,
+                      ),
+                    ),
+                    width: 110,
+                    height: 110,
 
+                  )
               ),
-              Container(
-                child: Center(
-                  child: Text('L',
-                    textAlign: TextAlign.center,
+              Positioned(
+                  top: 45,
+                  right: 20,
+                  child: Container(
+                    decoration: BoxDecoration(
+                        color: Colors.purple,
+                        borderRadius: BorderRadius.circular(10)
+                    ),
+                    child: Text("Box 2",
+                      style: TextStyle(
+                        decoration: TextDecoration.none,
+                        color: Colors.white,
+                        fontSize: 30,
+                      ),),
+                    height: 110,
+                    width: 110,
+                  )),
+              Positioned(
+                  top: 350,
+                  child: Container(
+                    decoration: BoxDecoration(
+                        color: Colors.orange,
+                        borderRadius: BorderRadius.circular(10)
+                    ),
+                    child: Text("Box4",
+                      style: TextStyle(
+                          decoration: TextDecoration.none,
+                          color: Colors.white,
+                          fontSize: 30
+                      ),),
+                    height: 110,
+                    width: 100,
+                  )),
+              Positioned(
+                  top: 350,
+                  left: 135,
+                  child: Container(
+                    decoration: BoxDecoration(
+                        color: Colors.blue,
+                        borderRadius: BorderRadius.circular(10)
+                    ),
+                    child: Text("Box 3",
+                      style: TextStyle(
+                          decoration: TextDecoration.none,
+                          fontSize: 30,
+                          color: Colors.white
+                      ),),
+                    height: 110,
+                    width: 110,
+                  )),
+              Positioned(
+                  top: 350,
+                  right: 0,
+                  child: Container(
+                    decoration: BoxDecoration(
+                        color: Colors.greenAccent,
+                        borderRadius: BorderRadius.circular(10)
+                    ),
+                    child: Text("Box 5",
+                      style: TextStyle(
+                          decoration: TextDecoration.none,
+                          fontSize: 30,
+                          color: Colors.white
+                      ),),
+                    height: 110,
+                    width: 110,
+                  )),
+              Align(alignment: Alignment.bottomCenter,
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: Colors.green,
+                      borderRadius: BorderRadius.circular(10)
+                  ),
+                  child: Text('Box 1',
                     style: TextStyle(
-                      decoration: TextDecoration.none,
-                      color: Colors.black,
+                        decoration: TextDecoration.none,
+                        color: Colors.white,
+                        fontSize: 30
                     ),),
-                ),
-                height: 200,
-                width: 50,
-                color: Colors.blue,
-              ),
-              Container(
-                child: Center(
-                  child: Text('U',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      decoration: TextDecoration.none,
-                      color: Colors.black,
-                    ),),
-                ),
-                height: 200,
-                width: 50,
-                color: Colors.lightBlue,
-              ),
-              Container(
-                child: Center(
-                  child: Text('T',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      decoration: TextDecoration.none,
-                      color: Colors.black,
-                    ),),
-                ),
-                height: 200,
-                width: 50,
-                color: Colors.lightBlueAccent,
-              ),
-              Container(
-                child: Center(
-                  child: Text('T',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      decoration: TextDecoration.none,
-                      color: Colors.black,
-                    ),),
-                ),
-                height: 200,
-                width: 50,
-                color: Colors.lightBlue,
-              ),
-              Container(
-                child: Center(
-                  child: Text('E',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      decoration: TextDecoration.none,
-                      color: Colors.black,
-                    ),),
-                ),
-                height: 200,
-                width: 50,
-                color: Colors.blue,
-              ),
-              Container(
-                decoration: BoxDecoration(
-                    color: Colors.blueAccent,
-                  borderRadius: BorderRadius.only(topRight: Radius.circular(20),bottomRight: Radius.circular(20))
-                ),
+                  height: 110,
+                  width: 110,
 
-                child: Center(
-                  child: Text('R',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      decoration: TextDecoration.none,
-                      color: Colors.black,
-                    ),),
                 ),
-                height: 200,
-                width: 50,
-
-              ),
-            ],
-          )
+              )
+            ]
+        ),
       ),
     );
   }
